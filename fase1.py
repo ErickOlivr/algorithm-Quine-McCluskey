@@ -150,7 +150,7 @@ def select_minimum_implicants(prime_implicants, minterms, num_vars):
 def format_expression(implicants, num_vars):
     if not implicants:
         return "0" 
-    letras = [chr(ord('A') + i) for i in range(num_vars)]
+    letras = [f"x{i}" for i in range(num_vars)]
     
     termos_formatados = []
     
@@ -172,7 +172,7 @@ def format_expression(implicants, num_vars):
     
 
 # --- Testando o Benchmark Completo ---
-pasta_benchmarks = r"D:\Dev\python\quine mcclukey\benchmark\benchmark\ex00.train.pla"
+pasta_benchmarks = r"benchmark\benchmark\*.train.pla"
 arquivos_para_testar = glob.glob(pasta_benchmarks)
 
 print(f"Encontrados {len(arquivos_para_testar)} ficheiros para testar.\n")
