@@ -172,8 +172,10 @@ def format_expression(implicants, num_vars):
     
 
 # --- Testando o Benchmark Completo ---
-pasta_benchmarks = r"benchmark\benchmark\*.train.pla"
-arquivos_para_testar = glob.glob(pasta_benchmarks)
+pasta_benchmarks = r"benchmark\benchmark\ex00.train.pla"
+pasta_exemplos = r"benchmark\ExemplosRelatorio\*.pla"
+arquivos_para_testar = glob.glob(pasta_exemplos)
+
 
 print(f"Encontrados {len(arquivos_para_testar)} ficheiros para testar.\n")
 
